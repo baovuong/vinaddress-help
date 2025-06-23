@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Addresser from './Addresser'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,18 +17,23 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vina Dresser</h1>
       <div className="card">
+        <div>
+            Gender?
+        </div>
+        <div>
+
+        </div>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div class="rowC">
+        <Addresser name="You" />
+        <Addresser name="Them" />
+      </div>
     </>
   )
 }
