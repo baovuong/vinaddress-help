@@ -2,7 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Addresser from './Addresser'
+import Addresser from './components/AddresserOutput'
+import AddresserInput from './components/AddresserInput'
+import AddresserOutput from './components/AddresserOutput'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,8 +33,14 @@ function App() {
       </div>
 
       <div class="rowC">
-        <Addresser name="You" />
-        <Addresser name="Them" />
+        <div class="card">
+            <AddresserOutput name={'You'} />
+            <AddresserInput />
+        </div>
+        <div class="card">
+            <AddresserOutput name={'They'} />
+            <AddresserInput />
+        </div>
       </div>
     </>
   )
