@@ -2,14 +2,22 @@ import { useState } from 'react'
 
 function AddresserOutput({name, yourAgeRange, yourGender, theirAgeRange, theirGender}) {
 
-    
-    // calculate addressed
 
-    // check gender
+    const pronounMap = [
+        'Ch\u00E1u',
+        'Con',
+        'Em',
+        {'m': 'Anh', 'f': 'Ch\u7883'},
+        {'m': 'Ch\u0250', 'f': 'Co'},
+        'B\u0225c',
+        {'m': '\u00D4ng', 'f': 'B\u00E0'}
+    ];
 
     // check how much younger/older 
 
-    const addressed = yourAgeRange <= theirAgeRange ? "youngster" : "elder";
+    // check gender
+
+    const addressed = yourAgeRange <= theirAgeRange ? pronounMap[0] : pronounMap[6].m;
 
     return (
         <div>
